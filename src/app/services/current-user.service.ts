@@ -4,7 +4,7 @@ import { BehaviorSubject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class CurrentUserServiceService {
+export class CurrentUserService {
 
   currentUser = new BehaviorSubject<{ id: string; name: string } | null | undefined >(undefined);
 
