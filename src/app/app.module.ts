@@ -11,7 +11,7 @@ import { CurrentUserService } from './services/current-user.service';
   imports: [
     BrowserModule
   ],
-  providers: [CurrentUserServiceService],
+  providers: [CurrentUserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
