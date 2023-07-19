@@ -4,15 +4,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { CurrentUserService } from './services/current-user.service';
 import { UsersTableModule } from './users-table/users-table.module';
-import { RouterModule, Routes } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserModule,
-    RouterModule,
+    AppRoutingModule,
     UsersTableModule,
   ],
   providers: [CurrentUserService],
