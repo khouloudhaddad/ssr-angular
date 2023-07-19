@@ -4,7 +4,9 @@ import { Observable } from 'rxjs';
 import { SortingInterface } from '../types/sorting.interface';
 import { UserInterface } from '../types/user.interface';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class UsersService {
   constructor(private http: HttpClient) {}
 
