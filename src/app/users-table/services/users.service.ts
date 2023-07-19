@@ -14,7 +14,7 @@ export class UsersService {
     sorting: SortingInterface,
     searchValue: string
   ): Observable<UserInterface[]> {
-    const url = `http://localhost:3004/users?_sort=${sorting.column}&_order=${sorting.order}&name_like=${searchValue}`;
+    const url = `https://jsonplaceholder.typicode.com/users?_sort=${sorting.column}&_order=${sorting.order}&name_like=${searchValue}`;
     return this.http.get<UserInterface[]>(url);
   }
 }
