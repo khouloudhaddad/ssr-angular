@@ -1,0 +1,8 @@
+#homeSlider{
+  height: 800px;
+  overflow: hidden;
+}
+#homeSlider img{
+  object-fit: cover;
+  max-height: 800px;
+}

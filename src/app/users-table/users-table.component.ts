@@ -12,7 +12,7 @@ import { UserInterface } from './types/user.interface';
   styleUrls: ['./users-table.component.scss'],
 })
 export class UsersTableComponent implements OnInit {
-  columns: Array<keyof UserInterface> = ['id', 'name', 'age'];
+  columns: Array<keyof UserInterface> = ['id', 'name', 'email'];
   sorting: SortingInterface = {
     column: 'id',
     order: 'asc',

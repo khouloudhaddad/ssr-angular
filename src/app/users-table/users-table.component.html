@@ -1,33 +1,40 @@
-<div>
-  <div class="search-bar">
+<section>
+  <div class="container">
+    <div class="row py-5">
+  <div class="search-bar col-md-3 ms-auto mb-4">
     <form [formGroup]="searchForm" (ngSubmit)="onSearchSubmit()">
       <input
         type="text"
         placeholder="Search..."
         formControlName="searchValue"
+        class="form-control"
       />
     </form>
   </div>
-  <table class="users-table">
-    <thead>
-      <tr>
-        <th
-          *ngFor="let column of columns"
-          class="users-table-cell"
-          (click)="sortTable(column)"
-        >
-          {{ capitalize(column) }}
-          <span *ngIf="isDescSorting(column)">▼</span>
-          <span *ngIf="isAscSorting(column)">▲</span>
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let user of users">
-        <td *ngFor="let column of columns" class="users-table-cell">
-          {{ user[column] }}
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="col-12">
+    <table class="table table-hover table-striped table-bordered">
+      <thead class="table-dark">
+        <tr>
+          <th
+            *ngFor="let column of columns"
+            class="users-table-cell"
+            (click)="sortTable(column)"
+          >
+            {{ capitalize(column) }}
+            <span *ngIf="isDescSorting(column)">▼</span>
+            <span *ngIf="isAscSorting(column)">▲</span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td *ngFor="let column of columns" class="users-table-cell">
+            {{ user[column] }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
+  </div>
+</section>
